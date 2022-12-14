@@ -12,7 +12,7 @@
           <router-link v-if="currentUser" to="/user" class="nav-link">User</router-link>
         </li>
       </div>
-      <authLogin></authLogin>
+      <!-- <authLogin></authLogin> -->
 
       <div v-if="!currentUser" class="navbar-nav ml-auto">
         <li class="nav-item">
@@ -44,7 +44,6 @@
 </template>
 
 <script>
-import authLogin from './components/auth/Login.vue';
 export default {
   computed: {
     currentUser() {
@@ -72,7 +71,6 @@ export default {
     }
   },
   components: {
-    authLogin,
   }
 };
 </script>

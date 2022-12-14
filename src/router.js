@@ -12,15 +12,15 @@ export const router = new Router({
     {
       path: '/',
       name: 'home',
-      comments: Home
+      component: Home
     },
     {
       path: '/login',
-      comments: Login
+      component: Login
     },
     {
       path: '/profile',
-      comments: Profile
+      component: Profile
     }
   ]
 })

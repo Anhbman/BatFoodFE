@@ -12,7 +12,8 @@ import {
   faSignInAlt,
   faSignOutAlt
 } from '@fortawesome/free-solid-svg-icons';
-import { router } from './router';
+// import { router } from './router';
+import  router from './router';
 import store from './store';
 
 library.add(faHome, faUser, faUserPlus, faSignInAlt, faSignOutAlt);
