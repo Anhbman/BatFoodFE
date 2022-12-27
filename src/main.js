@@ -3,6 +3,12 @@ import App from './App.vue'
 import VeeValidate from 'vee-validate';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+// Import Bootstrap and BootstrapVue CSS files (order is important)
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'element-ui/lib/theme-chalk/index.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {
@@ -13,14 +19,21 @@ import {
   faSignOutAlt
 } from '@fortawesome/free-solid-svg-icons';
 // import { router } from './router';
-import  router from './router';
+import  {router} from './router';
 import store from './store';
+import Element from 'element-ui'
+
 
 library.add(faHome, faUser, faUserPlus, faSignInAlt, faSignOutAlt);
 
 Vue.config.productionTip = false
 
+// Make BootstrapVue available throughout your project
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
 Vue.use(VeeValidate);
+Vue.use(Element);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 new Vue({
