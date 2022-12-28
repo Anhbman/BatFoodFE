@@ -4,6 +4,7 @@ import Home from '@/components/Home';
 import Login from '@/components/auth/Login';
 import Profile from '@/components/auth/Profile';
 import AddFood from '@/components/food/AddFood';
+import SideBar from '@/pages/layout/SideBar'
 
 Vue.use(Router);
 
@@ -23,9 +24,21 @@ export const router = new Router({
       path: '/profile',
       component: Profile
     },
+    // {
+    //   path: '/food/create',
+    //   component: AddFood
+    // },
     {
-      path: '/food/create',
-      component: AddFood
+      path: '/dashboad',
+      // redirect: '/dashboad/home',
+      component: SideBar,
+      children: [
+        {
+          path: 'food/create',
+          name: 'AddFood',
+          component: AddFood
+        }
+      ]
     }
   ]
 })

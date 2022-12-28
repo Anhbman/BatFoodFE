@@ -25,6 +25,7 @@
   <el-menu-item index="3" disabled>Info</el-menu-item>
   <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">Orders</a></el-menu-item>
 </el-menu>
+<router-view></router-view>
 </div>
 </template>
 
