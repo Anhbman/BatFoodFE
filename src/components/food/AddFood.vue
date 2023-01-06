@@ -2,7 +2,7 @@
   <div>
     <el-row>
       <el-col :offset="8" :span="8">
-      <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="120px" class="demo-ruleForm" id="add-blog" enctype="multipart/form-data">
+      <el-form label-position="top" :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="120px" class="demo-ruleForm" id="add-blog" enctype="multipart/form-data">
       <el-form-item label="Tên món ăn" prop="name">
         <el-input type="text" v-model="ruleForm.name" autocomplete="off" name="name"></el-input>
       </el-form-item>

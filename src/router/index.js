@@ -4,7 +4,8 @@ import Home from '@/components/Home';
 import Login from '@/components/auth/Login';
 import Profile from '@/components/auth/Profile';
 import AddFood from '@/components/food/AddFood';
-import SideBar from '@/pages/layout/SideBar'
+import SideBar from '@/pages/layout/SideBar';
+import ListFood from '@/components/food/ListFood';
 
 Vue.use(Router);
 
@@ -37,6 +38,10 @@ export const router = new Router({
           path: 'food/create',
           name: 'AddFood',
           component: AddFood
+        },
+        {
+          path: 'food',
+          component: ListFood
         }
       ]
     }

@@ -9,6 +9,18 @@ class FoodService {
       headers: authHeader()
     });
   }
+
+  getAll() {
+    return axios.get(API_URL, {
+      headers: authHeader()
+    });
+  }
+
+  getFoodById(data) {
+    return axios.get(API_URL + `/${{data}}`, {
+      headers: authHeader()
+    })
+  }
 }
 
 export default new FoodService();
