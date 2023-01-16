@@ -6,6 +6,8 @@ import Profile from '@/components/auth/Profile';
 import AddFood from '@/components/food/AddFood';
 import SideBar from '@/pages/layout/SideBar';
 import ListFood from '@/components/food/ListFood';
+import AddUser from '@/components/customer/Add';
+import Table from '@/components/tables/Table';
 
 Vue.use(Router);
 
@@ -42,6 +44,14 @@ export const router = new Router({
         {
           path: 'food',
           component: ListFood
+        },
+        {
+          path: 'customer/create',
+          component: AddUser
+        },
+        {
+          path: 'table',
+          component: Table
         }
       ]
     }

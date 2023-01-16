@@ -16,20 +16,11 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 
-// import {
-//   faHome,
-//   faUser,
-//   faUserPlus,
-//   faSignInAlt,
-//   faSignOutAlt
-// } from '@fortawesome/free-solid-svg-icons';
-// import { router } from './router';
 import  {router} from './router';
 import store from './store';
 import Element from 'element-ui'
 
 
-// library.add(fab, fas, far, faHome, faUser, faUserPlus, faSignInAlt, faSignOutAlt);
 library.add(fab, fas, far);
 
 Vue.config.productionTip = false

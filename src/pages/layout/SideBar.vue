@@ -28,6 +28,7 @@
     </el-row>
 
     <!-- Sidebar -->
+
     <el-row class="tac">
       <el-col :span="4">
         <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="false">
@@ -49,20 +50,34 @@
               <el-menu-item index="1-4-1">item one</el-menu-item>
             </el-submenu>
           </el-submenu>
-          <el-menu-item index="2">
+          <el-submenu index="2">
+            <template slot="title">
+              <font-awesome-icon icon="fa-solid fa-mug-saucer" class="icon-item"/>
+              <span slot="title">Nhà hàng</span>
+            </template>
+            <router-link to="/dashboad/table">
+              <el-menu-item index="2-1">
+                <font-awesome-icon icon="fa-solid fa-table" class="icon-item"/>
+                <span slot="title">Danh sách phòng / bàn</span>
+              </el-menu-item>
+            </router-link>
+          </el-submenu>
+          <el-menu-item index="3">
             <font-awesome-icon icon="fa-solid fa-users" class="icon-item"/>
             <span slot="title">Nhân viên</span>
           </el-menu-item>
           <router-link to="/dashboad/food">
-            <el-menu-item index="3">
+            <el-menu-item index="4">
               <font-awesome-icon icon="fa-solid fa-burger" class="icon-item"/>
               <span slot="title">Món ăn</span>
             </el-menu-item>
           </router-link>
-          <el-menu-item index="4">
-            <i class="el-icon-setting"></i>
-            <span slot="title">Navigator Four</span>
-          </el-menu-item>
+          <router-link to="/dashboad/customer/create">
+            <el-menu-item index="5">
+              <font-awesome-icon icon="fa-solid fa-user" class="icon-item"/>
+              <span slot="title">Khách hàng</span>
+            </el-menu-item>
+          </router-link>
         </el-menu>
       </el-col>
       <el-col :span="20">
