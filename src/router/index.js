@@ -8,6 +8,7 @@ import SideBar from '@/pages/layout/SideBar';
 import ListFood from '@/components/food/ListFood';
 import AddUser from '@/components/customer/Add';
 import Table from '@/components/tables/Table';
+import SelectTable from '@/components/cashier/SelectTable';
 
 Vue.use(Router);
 
@@ -27,10 +28,10 @@ export const router = new Router({
       path: '/profile',
       component: Profile
     },
-    // {
-    //   path: '/food/create',
-    //   component: AddFood
-    // },
+    {
+      path: '/cashier',
+      component: SelectTable
+    },
     {
       path: '/dashboad',
       // redirect: '/dashboad/home',

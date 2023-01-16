@@ -112,6 +112,9 @@
     min-height: 400px;
   } */
 
+  a { text-decoration: none; }
+
+
   .icon-item {
     margin-right: 5px;
     width: 24px;

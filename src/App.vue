@@ -16,6 +16,13 @@ html,body {
   margin: auto 0;
   height: 100%;
 }
+
+li a {
+    text-decoration: none;
+}
+
+a { text-decoration: none; }
+
 /* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
