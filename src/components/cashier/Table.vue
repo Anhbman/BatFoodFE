@@ -1,7 +1,9 @@
 <template>
     <el-row>
-			<el-col v-for="item in tables" :key="item.id" span="4">
-				<font-awesome-icon icon="fa-solid fa-table-cells-large" />
+			<h3>Phòng bàn</h3>
+			<el-col v-for="item in tables" :key="item.id" :span="4">
+				<font-awesome-icon icon="fa-solid fa-table-cells-large"/>
+				{{ item.name }}
 			</el-col>
     </el-row>
 </template>
@@ -27,6 +29,9 @@ export default {
 					console.log(error);
 				})
 		}
+	},
+	created() {
+		this.getTables();
 	}
 }
 </script>
