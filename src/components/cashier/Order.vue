@@ -3,7 +3,7 @@
       <el-col :span="12">
         <el-tabs type="border-card">
           <el-tab-pane label="Bàn">
-            <Table></Table>
+            <Table v-on:selectTable="handleSelectTable"></Table>
           </el-tab-pane>
           <el-tab-pane label="Thực đơn">
             <Food></Food>
@@ -20,6 +20,11 @@ import Food from './Food.vue';
 
 export default {
   name: 'cashierOder',
+  methods: {
+    handleSelectTable(val) {
+      console.log(val);
+    }
+  },
   components: {
     Table,
     Food
