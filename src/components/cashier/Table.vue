@@ -1,14 +1,18 @@
 <template>
     <el-row>
 			<h3>Phòng bàn</h3>
+			<el-radio-group v-model="radio1">
 			<el-col v-for="item in tables" :key="item.id" :span="4" >
-				<!-- <font-awesome-icon icon="fa-solid fa-table-cells-large"/> -->
-				<!-- <svg xmlns="http://www.w3.org/2000/svg"> -->
-					<div @click="clickSelectTable(item.id)" class="table-item" :class="{ table_actived: item.active }">
+					<!-- <div @click="clickSelectTable(item.id)" class="table-item" :class="{ table_actived: item.active }">
 						<img src="../../../public/static/icon/table.png"  />
 						{{ item.name }}
-					</div>
+					</div> -->
+					
+						<el-radio-button :label="item.name" class="table-item" :class="{ table_actived: item.active }" :disabled="item.active">
+							<img src="../../../public/static/icon/table.png"  />
+						</el-radio-button>
 			</el-col>
+		</el-radio-group>
     </el-row>
 </template>
 
@@ -21,6 +25,7 @@ export default {
 	data() {
 		return {
 			tables: null,
+			radio1: null
 		}
 	},
 	methods: {
@@ -59,8 +64,8 @@ export default {
 }
 
 .table_actived {
-	
 	background: #c2e0ff;
 }
+
 
 </style>
