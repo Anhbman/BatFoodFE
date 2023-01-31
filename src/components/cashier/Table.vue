@@ -8,7 +8,7 @@
 						{{ item.name }}
 					</div> -->
 					
-						<el-radio-button :label="item.name" class="table-item" :class="{ table_actived: item.active }" :disabled="item.active">
+						<el-radio-button :label="item.name" class="table-item" :disabled="item.active">
 							<img src="../../../public/static/icon/table.png"  />
 						</el-radio-button>
 			</el-col>
@@ -48,7 +48,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
 .table-item {
 	display: grid;
 	justify-items: center;
@@ -63,9 +63,13 @@ export default {
 	background: #0066cc;
 }
 
-.table_actived {
+/* .table_actived {
 	background: #c2e0ff;
-}
+} */
 
+.el-radio-button__orig-radio:disabled+.el-radio-button__inner {
+  background-color: #c2e0ff !important;
+  /* border-color: #c2e0ff; */
+}
 
 </style>
