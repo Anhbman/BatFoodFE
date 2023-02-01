@@ -1,5 +1,5 @@
 <template>
-  <el-row>
+  <el-row :gutter="40">
     <el-col :span="8" v-for="item in foods" :key="item.id">
       <el-card>
         <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
@@ -38,3 +38,7 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  
+</style>
