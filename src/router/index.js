@@ -8,7 +8,7 @@ import SideBar from '@/pages/layout/SideBar';
 import ListFood from '@/components/food/ListFood';
 import AddUser from '@/components/customer/Add';
 import Table from '@/components/tables/Table';
-import Order from '@/components/cashier/Order';
+import Cashier from '@/components/cashier/Cashier';
 
 Vue.use(Router);
 
@@ -30,7 +30,7 @@ export const router = new Router({
     },
     {
       path: '/cashier',
-      component: Order
+      component: Cashier
     },
     {
       path: '/dashboad',

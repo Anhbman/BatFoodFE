@@ -1,33 +1,53 @@
 <template>
-    <el-row>
-      <el-col :span="12">
-        <el-tabs type="border-card">
-          <el-tab-pane label="Bàn">
-            <Table v-on:selectTable="handleSelectTable"></Table>
-          </el-tab-pane>
-          <el-tab-pane label="Thực đơn">
-            <Food></Food>
-          </el-tab-pane>
-        </el-tabs>
-      </el-col>
-    </el-row>
+  <div>
+    <h1>Món ăn</h1>
+    <!-- {{ foods }} -->
+    <!-- <el-row v-for="(item) in getFoods" :key="item.id">
+      {{ item.name }} - {{ item.amount }}
+    </el-row> -->
+    <el-table
+      :data="getFoods"
+      style="width: 100%">
+      <el-table-column
+        prop="name"
+        label="Tên"
+        width="100">
+      </el-table-column>
+      <el-table-column
+        prop="amount"
+        label="Số lượng"
+        width="100">
+      </el-table-column>
+    </el-table>
+  </div>
 </template>
 
 <script>
-
-import Table from './Table.vue';
-import Food from './Food.vue';
-
 export default {
-  name: 'cashierOder',
-  methods: {
-    handleSelectTable(val) {
-      console.log(val);
+  name: 'OrderCashier',
+  data() {
+    return {
+      orderFood: [],
     }
   },
-  components: {
-    Table,
-    Food
+  props: {
+    foods: {
+      type: Array,
+      default: () => null
+    }
+  },
+  methods: {
+  },
+  computed: {
+    getFoods() {
+      return this.$store.state.order.orderFoods;
+    }
+  },
+  watch: {
+    foods() {
+      console.log('Food');
+      this.addFood();
+    }
   }
 }
 </script>
