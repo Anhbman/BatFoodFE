@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :key="index">
     <h1>Món ăn</h1>
     <!-- {{ foods }} -->
     <!-- <el-row v-for="(item) in getFoods" :key="item.id">
@@ -16,7 +16,10 @@
       <el-table-column
         prop="amount"
         label="Số lượng"
-        width="100">
+        >
+        <template v-slot="scope">
+          <el-input-number v-model="scope.row.amount" @change="handleChangeAmount(scope.$index, scope.row)" :min="1" :max="10"></el-input-number>
+        </template>
       </el-table-column>
     </el-table>
   </div>
@@ -28,6 +31,7 @@ export default {
   data() {
     return {
       orderFood: [],
+      index: 0
     }
   },
   props: {
@@ -37,16 +41,17 @@ export default {
     }
   },
   methods: {
+    changeIndex() {
+      this.index++;
+    },
+    handleChangeAmount(index, val) {
+      console.log(index, val);
+    }
   },
   computed: {
     getFoods() {
-      return this.$store.state.order.orderFoods;
-    }
-  },
-  watch: {
-    foods() {
-      console.log('Food');
-      this.addFood();
+      this.changeIndex();
+      return this.foods;
     }
   }
 }

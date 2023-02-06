@@ -20,7 +20,8 @@
 
 import Table from './Table.vue';
 import Food from './Food.vue';
-import Order from './Order.vue';  
+import Order from './Order.vue';
+import Vue from 'vue'  
 
 export default {
   name: 'cashierOder',
@@ -37,14 +38,16 @@ export default {
       let index = this.isFoodSelected(val);
       if ( index === null) {
         val.amount = 1;
-        this.$store.dispatch('order/addFood', val);
+        Vue.set(this.selectedFood, this.selectedFood.length, val)
       } else {
-        this.$store.dispatch('order/updateFood', index);
+        let val = this.selectedFood[index];
+        val.amount++;
+      Vue.set(this.selectedFood, index, val)
       }
     },
     isFoodSelected(val) {
       let i = null;
-      this.$store.state.order.orderFoods.forEach((value, index) => {
+      this.selectedFood.forEach((value, index) => {
         if (val.id === value.id) {
           i = index;
         }
