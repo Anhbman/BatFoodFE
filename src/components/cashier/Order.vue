@@ -45,7 +45,7 @@ export default {
       this.index++;
     },
     handleChangeAmount(index, val) {
-      console.log(index, val);
+      this.$emit("updateAmount", {index, val});
     }
   },
   computed: {

@@ -11,7 +11,7 @@
         </el-tabs>
       </el-col>
       <el-col :span="12">
-        <Order :foods="selectedFood"></Order>
+        <Order :foods="selectedFood" v-on:updateAmount="handleUpdateAmount"></Order>
       </el-col>
     </el-row>
 </template>
@@ -42,7 +42,7 @@ export default {
       } else {
         let val = this.selectedFood[index];
         val.amount++;
-      Vue.set(this.selectedFood, index, val)
+        Vue.set(this.selectedFood, index, val)
       }
     },
     isFoodSelected(val) {
@@ -53,6 +53,9 @@ export default {
         }
       })
       return i;
+    },
+    handleUpdateAmount({index, val}) {
+      Vue.set(this.selectedFood, index, val)
     }
   },
   components: {
