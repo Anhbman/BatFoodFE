@@ -19,6 +19,8 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 import  {router} from './router';
 import store from './store';
 import Element from 'element-ui'
+import filters from './filter'
+
 
 
 library.add(fab, fas, far);
@@ -36,5 +38,6 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 new Vue({
   router,
   store,
+  filters,
   render: h => h(App)
 }).$mount('#app');

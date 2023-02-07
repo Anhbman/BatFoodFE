@@ -10,8 +10,14 @@
       style="width: 100%">
       <el-table-column
         prop="name"
-        label="Tên"
-        width="100">
+        label="Tên">
+      </el-table-column>
+      <el-table-column
+        prop="price"
+        label="Đơn giá">
+        <template v-slot="scope">
+          {{ scope.row.price | toCurrency }}
+        </template>
       </el-table-column>
       <el-table-column
         prop="amount"
