@@ -1,5 +1,5 @@
 <template>
-  <div :key="index">
+  <div :key="index"  class="full-display order">
     <h1>Món ăn</h1>
     <!-- {{ foods }} -->
     <!-- <el-row v-for="(item) in getFoods" :key="item.id">
@@ -24,10 +24,21 @@
         label="Số lượng"
         >
         <template v-slot="scope">
-          <el-input-number v-model="scope.row.amount" @change="handleChangeAmount(scope.$index, scope.row)" :min="1" :max="10"></el-input-number>
+          <div class="combo-text-number">
+            <el-input-number size="mini" v-model="scope.row.amount" @change="handleChangeAmount(scope.$index, scope.row)" :min="1" :max="10"></el-input-number>
+            <font-awesome-icon icon="fa-regular fa-note-sticky" class="note-item"/>
+          </div>
         </template>
       </el-table-column>
     </el-table>
+    <el-row :gutter="20" class="order-request">
+      <el-col :span="12" class="order-request-btn">
+        <el-button type="success" class="order-request-btn-item" >Success</el-button>
+      </el-col>
+      <el-col :span="12">
+        <el-button type="primary" class="order-request-btn-item" >Primary</el-button>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -62,3 +73,34 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.note-item {
+  font-size: 25px;
+}
+
+.combo-text-number {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.order {
+  position: relative;
+}
+
+.order-request {
+  bottom: 15px;
+  position: absolute;
+  width: 100%;
+}
+
+.order-request-btn-item {
+  width: 90%;
+  height: 50px;
+}
+
+.order-request-btn {
+  text-align: center;
+}
+</style>

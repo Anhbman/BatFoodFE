@@ -9,7 +9,10 @@
 					</div> -->
 					
 						<el-radio-button :label="item.name" class="table-item" :disabled="item.active">
-							<img src="../../../public/static/icon/table.png"  />
+							<div class="table-text">
+								<img src="../../../public/static/icon/table.png"  />
+								{{ item.name }}
+							</div>
 						</el-radio-button>
 			</el-col>
 		</el-radio-group>
@@ -70,6 +73,10 @@ export default {
 .el-radio-button__orig-radio:disabled+.el-radio-button__inner {
   background-color: #c2e0ff !important;
   /* border-color: #c2e0ff; */
+}
+
+.table-text {
+	display: grid;
 }
 
 </style>

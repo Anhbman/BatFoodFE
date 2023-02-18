@@ -1,16 +1,16 @@
 <template>
-    <el-row>
-      <el-col :span="12">
-        <el-tabs type="border-card">
-          <el-tab-pane label="Bàn">
+    <el-row class="full-display">
+      <el-col :span="12"  class="full-display">
+        <el-tabs type="border-card"  class="full-display">
+          <el-tab-pane label="Bàn"  class="full-display">
             <Table v-on:selectTable="handleSelectTable"></Table>
           </el-tab-pane>
-          <el-tab-pane label="Thực đơn">
+          <el-tab-pane label="Thực đơn"  class="full-display">
             <Food v-on:selectFood="handleSelectFood"></Food>
           </el-tab-pane>
         </el-tabs>
       </el-col>
-      <el-col :span="12">
+      <el-col :span="12"  class="full-display">
         <Order :foods="selectedFood" v-on:updateAmount="handleUpdateAmount"></Order>
       </el-col>
     </el-row>
@@ -65,3 +65,11 @@ export default {
   }
 }
 </script>
+
+<style>
+
+.full-display {
+  height: 100%;
+}
+
+</style>

@@ -30,4 +30,7 @@ a { text-decoration: none; }
   text-align: center;
   color: #2c3e50;
 } */
+#app {
+  height: 100%;
+}
 </style>
