@@ -1,5 +1,5 @@
 <template>
-    <el-row>
+    <el-row class="full-display">
 			<h3>Phòng bàn</h3>
 			<el-radio-group v-model="radio1">
 			<el-col v-for="item in tables" :key="item.id" :span="4" >

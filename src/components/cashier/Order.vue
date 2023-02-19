@@ -7,7 +7,9 @@
     </el-row> -->
     <el-table
       :data="getFoods"
-      style="width: 100%">
+      style="width: 100%"
+      height="85%"
+      >
       <el-table-column
         prop="name"
         label="Tên">
@@ -33,10 +35,16 @@
     </el-table>
     <el-row :gutter="20" class="order-request">
       <el-col :span="12" class="order-request-btn">
-        <el-button type="success" class="order-request-btn-item" >Success</el-button>
+        <el-button type="success" class="order-request-btn-item" >
+          <font-awesome-icon icon="fa-solid fa-dollar-sign" />
+          Thanh toán
+        </el-button>
       </el-col>
       <el-col :span="12">
-        <el-button type="primary" class="order-request-btn-item" >Primary</el-button>
+        <el-button type="primary" class="order-request-btn-item" >
+          <font-awesome-icon icon="fa-solid fa-bell" />
+          Thông báo
+        </el-button>
       </el-col>
     </el-row>
   </div>
@@ -85,14 +93,15 @@ export default {
   justify-content: space-around;
 }
 
-.order {
+/* .order {
   position: relative;
-}
+} */
 
 .order-request {
-  bottom: 15px;
-  position: absolute;
+  /* bottom: 15px; */
+  /* position: absolute; */
   width: 100%;
+  /* height: 20%; */
 }
 
 .order-request-btn-item {
