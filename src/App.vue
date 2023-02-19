@@ -13,8 +13,10 @@ export default {
 <style >
 html,body {
   box-sizing: border-box;
-  margin: auto 0;
+  /* margin: auto 0; */
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 li a {
@@ -32,5 +34,6 @@ a { text-decoration: none; }
 } */
 #app {
   height: 100%;
+  /* margin-bottom: 5px; */
 }
 </style>

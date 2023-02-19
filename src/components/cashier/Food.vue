@@ -2,24 +2,16 @@
   <el-row :gutter="20" class="crollbar">
       <el-col :span="6" v-for="item in foods" :key="item.id">
         <div @click="selectFood(item)">
-          <el-card>
-            <img :src="'http://localhost:8080/image/'+ item.image" class="image">
-            <div style="padding: 14px;">
-              <span>{{ item.name }}</span>
+          <el-card class="card" :body-style="{ padding: '0px' }">
+            <img :src="'http://localhost:8080/image/'+ item.image" class="image card-img">
+            <div style="padding: 14px;" class="card-body">
+              <!-- <span>{{ item.name }}</span> -->
+              <h3 class="card-title">Title</h3>
+              <p class="card-text">{{ item.price | toCurrency }}</p>
             </div>
           </el-card>
         </div>
       </el-col>
-    <!-- <el-col :span="6" v-for="item in foods" :key="item.id">
-      <div @click="selectFood(item)">
-        <el-card>
-          <img :src="'http://localhost:8080/image/'+ item.image" class="image">
-          <div style="padding: 14px;">
-            <span>{{ item.name }}</span>
-          </div>
-        </el-card>
-      </div>
-    </el-col> -->
   </el-row>
 </template>
 
@@ -56,14 +48,29 @@ export default {
 
 <style scoped>
 
-.image {
-    width: 100%;
-    display: block;
-  }
-
 .crollbar {
-  overflow-y: auto;
-  height: 100vh;
+  /* overflow-y: auto; */
+  height: 90vh;
+  /* height: 100%; */
+  /* overflow: hidden; */
+  overflow: scroll;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card-img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain; 
+  display: block;
 }
   
 </style>

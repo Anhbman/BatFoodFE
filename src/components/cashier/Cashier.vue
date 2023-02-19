@@ -71,8 +71,7 @@ export default {
 <style>
 
 .full-display {
-  /* height: 100%; */
-  height: 98vh;
+  /* height: 100%s; */
+  height: 100%;
 }
-
 </style>

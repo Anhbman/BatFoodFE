@@ -8,7 +8,7 @@
     <el-table
       :data="getFoods"
       style="width: 100%"
-      height="85%"
+      height="80%"
       >
       <el-table-column
         prop="name"
