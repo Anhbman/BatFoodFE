@@ -1,16 +1,14 @@
 <template>
-    <el-row>
+    <el-row class="full-display">
 			<h3>Phòng bàn</h3>
-			<el-radio-group v-model="radio1">
+			<el-radio-group v-model="radio1" @change="clickSelectTable">
 			<el-col v-for="item in tables" :key="item.id" :span="4" >
-					<!-- <div @click="clickSelectTable(item.id)" class="table-item" :class="{ table_actived: item.active }">
+				<el-radio-button :label="item.id" class="table-item" :disabled="item.active">
+					<div class="table-text">
 						<img src="../../../public/static/icon/table.png"  />
 						{{ item.name }}
-					</div> -->
-					
-						<el-radio-button :label="item.name" class="table-item" :disabled="item.active">
-							<img src="../../../public/static/icon/table.png"  />
-						</el-radio-button>
+					</div>
+				</el-radio-button>
 			</el-col>
 		</el-radio-group>
     </el-row>
@@ -70,6 +68,10 @@ export default {
 .el-radio-button__orig-radio:disabled+.el-radio-button__inner {
   background-color: #c2e0ff !important;
   /* border-color: #c2e0ff; */
+}
+
+.table-text {
+	display: grid;
 }
 
 </style>

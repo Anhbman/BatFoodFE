@@ -1,15 +1,17 @@
 <template>
-  <el-row :gutter="40">
-    <el-col :span="8" v-for="item in foods" :key="item.id">
-      <div @click="selectFood(item)">
-        <el-card>
-          <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
-          <div style="padding: 14px;">
-            <span>{{ item.name }}</span>
-          </div>
-        </el-card>
-      </div>
-    </el-col>
+  <el-row :gutter="20" class="crollbar">
+      <el-col :span="6" v-for="item in foods" :key="item.id">
+        <div @click="selectFood(item)">
+          <el-card class="card" :body-style="{ padding: '0px' }">
+            <img :src="'http://localhost:8080/image/'+ item.image" class="image card-img">
+            <div style="padding: 14px;" class="card-body">
+              <!-- <span>{{ item.name }}</span> -->
+              <p class="card-title" slot="header">{{item.name}}</p>
+              <p class="card-text">{{ item.price | toCurrency }}</p>
+            </div>
+          </el-card>
+        </div>
+      </el-col>
   </el-row>
 </template>
 
@@ -45,5 +47,36 @@ export default {
 </script>
 
 <style scoped>
+
+.crollbar {
+  /* overflow-y: auto; */
+  height: 90vh;
+  /* height: 100%; */
+  /* overflow: hidden; */
+  overflow: scroll;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card-img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain; 
+  display: block;
+}
+
+.card-title {
+  /* height: 80px; */
+  overflow-y: auto;
+  font-weight: bold;
+}
   
 </style>
