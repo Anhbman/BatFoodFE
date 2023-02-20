@@ -1,5 +1,5 @@
 <template>
-  <div :key="index">
+  <div :key="index" class="full-height">
     <h1>Món ăn</h1>
     <!-- {{ foods }} -->
     <!-- <el-row v-for="(item) in getFoods" :key="item.id">
@@ -24,7 +24,7 @@
         label="Số lượng"
         >
         <template v-slot="scope">
-          <el-input-number v-model="scope.row.amount" @change="handleChangeAmount(scope.$index, scope.row)" :min="1" :max="10"></el-input-number>
+          <el-input-number size="mini" v-model="scope.row.amount" @change="handleChangeAmount(scope.$index, scope.row)" :min="1" :max="10"></el-input-number>
         </template>
       </el-table-column>
     </el-table>
@@ -62,3 +62,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .full-height {
+    height: 100%;
+  }
+</style>

@@ -1,7 +1,7 @@
 <template>
-    <el-row>
-      <el-col :span="12">
-        <el-tabs type="border-card">
+    <el-row class="full-height">
+      <el-col :span="12" class="full-height">
+        <el-tabs type="border-card" class="full-height">
           <el-tab-pane label="Bàn">
             <Table v-on:selectTable="handleSelectTable"></Table>
           </el-tab-pane>
@@ -10,7 +10,7 @@
           </el-tab-pane>
         </el-tabs>
       </el-col>
-      <el-col :span="12">
+      <el-col :span="12" class="full-height">
         <Order :foods="selectedFood" v-on:updateAmount="handleUpdateAmount"></Order>
       </el-col>
     </el-row>

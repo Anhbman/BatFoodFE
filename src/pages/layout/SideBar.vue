@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <el-row>
+  <div class="menu">
+    <el-row class="menu">
       <el-menu
         :default-active="activeIndex2"
         class="el-menu-demo"
@@ -121,5 +121,9 @@
     text-align: center;
     font-size: 18px;
     vertical-align: middle;
+  }
+
+  .menu {
+    height: 100%;
   }
 </style>
