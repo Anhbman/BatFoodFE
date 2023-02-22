@@ -10,6 +10,12 @@ class OrderService {
     });
   }
 
+  getRequestOrders() {
+    return axios.get(API_URL + '/requestOrders', {
+      headers: authHeader()
+    });
+  }
+
 }
 
 export default new OrderService();
