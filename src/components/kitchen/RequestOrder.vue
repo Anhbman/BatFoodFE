@@ -1,5 +1,6 @@
 <template>
-  <el-row>
+  <div class="container">
+    <el-row>
     <el-collapse  v-model="activeNames">
       <el-collapse-item v-for="item in foods" :key="item.id" :title="item.table.name" :name="item.table.name">
         <el-table
@@ -15,6 +16,7 @@
       </el-collapse-item>
     </el-collapse>
   </el-row>
+  </div>
 </template>
 
 <script>
