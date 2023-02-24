@@ -25,6 +25,7 @@
           <div class="combo-text-number">
             <el-input-number size="mini" v-model="scope.row.amount" @change="handleChangeAmount(scope.$index, scope.row)" :min="1" :max="10"></el-input-number>
             <font-awesome-icon icon="fa-regular fa-note-sticky" class="note-item"/>
+            <font-awesome-icon icon="fa-regular fa-trash-can" class="note-item"/>
           </div>
         </template>
       </el-table-column>

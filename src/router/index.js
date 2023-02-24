@@ -9,6 +9,7 @@ import ListFood from '@/components/food/ListFood';
 import AddUser from '@/components/customer/Add';
 import Table from '@/components/tables/Table';
 import Cashier from '@/components/cashier/Cashier';
+import Kitchen from '@/components/kitchen/Kitchen.vue';
 
 Vue.use(Router);
 
@@ -31,6 +32,10 @@ export const router = new Router({
     {
       path: '/cashier',
       component: Cashier
+    },
+    {
+      path: '/kitchen',
+      component: Kitchen
     },
     {
       path: '/dashboad',
