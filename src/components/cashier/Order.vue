@@ -96,10 +96,25 @@ export default {
       console.log(order);
       orderService.create(order)
         .then(data => {
-          console.log(data.data);
+          console.log(data);
+          this.$swal({
+            title: 'Thành công!',
+            text: 'Order thành công!!!',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+          })
         })
         .catch(error => {
           console.log(error);
+          this.$swal({
+            title: 'Thất bại!',
+            position: 'top-end',
+            text: 'Order thất bại!!!',
+            icon: 'error',
+            // confirmButtonText: 'Cool',
+            showConfirmButton: false,
+            timer: 1500
+          })
         })
     }
   },

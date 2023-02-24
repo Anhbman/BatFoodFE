@@ -4,6 +4,8 @@ import VeeValidate from 'vee-validate';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import VueSweetalert2 from 'vue-sweetalert2';
+
 
 // Import Bootstrap and BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css'
@@ -34,6 +36,11 @@ Vue.use(IconsPlugin)
 Vue.use(VeeValidate);
 Vue.use(Element);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
+
+// alert
+
+Vue.use(VueSweetalert2);
+
 
 new Vue({
   router,
