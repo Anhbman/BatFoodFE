@@ -1,5 +1,5 @@
 <template>
-  <el-row>
+  <el-row class="container-fluid" :gutter="20">
     <el-col :span="12">
       <request-order></request-order>
     </el-col>
