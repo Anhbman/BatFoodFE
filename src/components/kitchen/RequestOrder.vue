@@ -18,9 +18,14 @@
           </el-table-column>
           <el-table-column>
             <template v-slot="scope">
-              <button  @click="handleClickFood(scope.row)" class="kitchen-btn">
+              <div class="kitchen-btn">
+                 <button  @click="handleClickFood(scope.row)" class="kitchen-btn-item">
                 <font-awesome-icon icon="fa-solid fa-angle-right" />
-              </button>
+                </button>
+                <button  @click="handleClickAllFood(scope.row)" class="kitchen-btn-item">
+                  <font-awesome-icon icon="fa-solid fa-angles-right" />
+                </button>
+              </div>
               <!-- <font-awesome-icon icon="fa-solid fa-angle-right" @click="handleClickFood(scope.row)" /> -->
             </template>
           </el-table-column>
@@ -66,6 +71,9 @@ export default {
     },
     handleClickFood(val) {
       console.log(val);
+    },
+    handleClickAllFood(val) {
+      console.log(val);
     }
   },
   computed: {
@@ -83,6 +91,11 @@ export default {
 }
 
 .kitchen-btn {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.kitchen-btn-item {
   border-radius: 5px;
   width: 20%;
   background-color: white;
@@ -90,7 +103,7 @@ export default {
   color: #f4557e;
 }
 
-.kitchen-btn:hover {
+.kitchen-btn-item:hover {
   background-color: #f4557e;
   border: 1px solid white;
   color: white;
