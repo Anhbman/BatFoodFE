@@ -55,7 +55,7 @@
               <font-awesome-icon icon="fa-solid fa-mug-saucer" class="icon-item"/>
               <span slot="title">Nhà hàng</span>
             </template>
-            <router-link to="/dashboad/table">
+            <router-link to="/dashboard/table">
               <el-menu-item index="2-1">
                 <font-awesome-icon icon="fa-solid fa-table" class="icon-item"/>
                 <span slot="title">Danh sách phòng / bàn</span>
@@ -66,13 +66,13 @@
             <font-awesome-icon icon="fa-solid fa-users" class="icon-item"/>
             <span slot="title">Nhân viên</span>
           </el-menu-item>
-          <router-link to="/dashboad/food">
+          <router-link to="/dashboard/food">
             <el-menu-item index="4">
               <font-awesome-icon icon="fa-solid fa-burger" class="icon-item"/>
               <span slot="title">Món ăn</span>
             </el-menu-item>
           </router-link>
-          <router-link to="/dashboad/customer/create">
+          <router-link to="/dashboard/customer/create">
             <el-menu-item index="5">
               <font-awesome-icon icon="fa-solid fa-user" class="icon-item"/>
               <span slot="title">Khách hàng</span>
@@ -123,7 +123,7 @@
     vertical-align: middle;
   }
 
-  .menu {
+  /* .menu {
     height: 100%;
-  }
+  } */
 </style>

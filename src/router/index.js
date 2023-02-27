@@ -38,7 +38,7 @@ export const router = new Router({
       component: Kitchen
     },
     {
-      path: '/dashboad',
+      path: '/dashboard',
       // redirect: '/dashboad/home',
       component: SideBar,
       children: [

@@ -71,6 +71,14 @@ export default {
     },
     handleClickFood(val) {
       console.log(val);
+      orderService.responseFood(val.id)
+        .then(response => {
+          console.log(response);
+          this.getFoods();
+        })
+        .catch(error => {
+          console.log(error);
+        })
     },
     handleClickAllFood(val) {
       console.log(val);

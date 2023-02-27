@@ -16,6 +16,12 @@ class OrderService {
     });
   }
 
+  responseFood(id) {
+    return axios.put(API_URL + `/acceptFood/${id}`, {
+      headers: authHeader()
+    });
+  }
+
 }
 
 export default new OrderService();
