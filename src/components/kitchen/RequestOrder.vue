@@ -56,7 +56,6 @@ export default {
           this.activeNames = this.foods.map((value) => {
             return value.table.name;
           })
-          console.log(this.foods);
         })
         .catch(error => {
           console.log(error);
@@ -66,14 +65,13 @@ export default {
       let total = item.orderFoods.reduce((total, currentVal) => {
         return total + currentVal.amount;
       }, 0)
-      console.log(12, total);
       return total;
     },
     handleClickFood(val) {
       console.log(val);
       orderService.responseFood(val.id)
         .then(response => {
-          console.log(response);
+          console.log(1, response.data);
           this.getFoods();
         })
         .catch(error => {
